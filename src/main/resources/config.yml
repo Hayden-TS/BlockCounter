@@ -1,0 +1,43 @@
+
+#██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗░█████╗░░█████╗░██╗░░░██╗███╗░░██╗████████╗███████╗██████╗░░░░░░░░
+#██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝██╔══██╗██╔══██╗██║░░░██║████╗░██║╚══██╔══╝██╔════╝██╔══██╗░░██╗░░
+#██████╦╝██║░░░░░██║░░██║██║░░╚═╝█████═╝░██║░░╚═╝██║░░██║██║░░░██║██╔██╗██║░░░██║░░░█████╗░░██████╔╝██████╗
+#██╔══██╗██║░░░░░██║░░██║██║░░██╗██╔═██╗░██║░░██╗██║░░██║██║░░░██║██║╚████║░░░██║░░░██╔══╝░░██╔══██╗╚═██╔═╝
+#██████╦╝███████╗╚█████╔╝╚█████╔╝██║░╚██╗╚█████╔╝╚█████╔╝╚██████╔╝██║░╚███║░░░██║░░░███████╗██║░░██║░░╚═╝░░
+#╚═════╝░╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝░╚════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝░░░░░░░
+
+settings:
+  message: "&b&lBLOCKS &7- You have broken &3%blocks% &7blocks"
+  event_priority: "MONITOR"
+  #Placeholder for %blockcounter_nextreward% and next interval reward when
+  #player has received all available rewards and there is no next reward
+  noreward_placeholder: "&a&lMAX"
+  hooks:
+    autosell: false
+    tokenenchant: false
+
+rewards:
+  miner:
+    blocks: 500
+    commands:
+      - "[cmd] eco give %player% 500"
+      - "[message] &bThis will execute each time a players block counter reaches 500"
+
+  prominer:
+    blocks: 1000
+    commands:
+      - "[cmd] eco give %player% 1000"
+      - "[message] &bThis will execute each time a players block counter reaches 1000"
+
+
+interval-rewards:
+  miner:
+    every: 750
+    commands:
+      - "[cmd] eco give %player% 750"
+      - "[message] &bThis will execute each time a players block counter reaches a multiple of 750"
+  prominer:
+    every: 1500
+    commands:
+      - "[cmd] eco give %player% 1500"
+      - "[message] &bThis will execute each time a players block counter reaches a multiple of 1500"

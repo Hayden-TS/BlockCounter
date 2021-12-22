@@ -1,0 +1,8 @@
+name: BlockCounter
+version: 1.0
+main: me.Hayden.BlockCounter.Main
+softdepend: [PlaceholderAPI]
+api-version: 1.13
+commands:
+  blocks:
+    description: main command
